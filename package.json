@@ -11,12 +11,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/pengliheng/component.git"
+		"url": "git+https://github.com/pengliheng/myvue.git"
 	},
 	"keywords": [
-		"component"
+		"vue vue-router url-control"
 	],
-	"author": "kingubo",
+	"author": "彭立衡",
 	"license": "MIT",
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
