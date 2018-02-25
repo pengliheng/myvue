@@ -74,6 +74,7 @@
         </footer>
 	</div>
 </template>
+
 <script>
 	export default {
 		name: 'App'
@@ -93,7 +94,6 @@
 				style: 'styleHover'
 			})
 		})
-		// 18873372281
 		// 全局点击代理
 		touchEndGlobalProxy({
 			event:'touchend'
@@ -103,7 +103,7 @@
 	}
 	let currentLinkHighLight = args => {
 		let currentLink = location.pathname.split('/')[1];
-		if(currentLink != ""){
+		if(currentLink != "" && currentLink != "register" && currentLink != "login"){
 			document.querySelector("#"+currentLink).classList.add('active')
 		}
 	}
@@ -239,6 +239,7 @@ ul,li{
 					}
 					&.active {
 						background-color: indianred;
+						color: #fff;
 						cursor: pointer;
 					}
 				}

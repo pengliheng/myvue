@@ -15,21 +15,31 @@
 // })
 
 
-function reverseString(str){
-	let revString = '';
-	for (let i = str.length-1; i>=0 ;i--) {
-		debugger;
-		revString += str[i]
-	}
-	return revString
-	// return str
-	// 	.split('')
-	// 	.reverse()
-	// 	.join('');
-}
 
+// // global variable
+// qwe = 'qwe'
 
+// local variable
+
+"use strict";
+
+let pingpong = (e => {
+  var PRIVATE = 0;
+  let let_private = 10;
+  return {
+    inc: e => {
+      PRIVATE += e;
+      return PRIVATE;
+    },
+    dec: e => {
+      PRIVATE -= e;
+      return PRIVATE;
+    }
+  }
+})()
 
 console.log(
-	reverseString('hello')
+  pingpong.inc(3),
+  pingpong.inc(3),
+  pingpong.dec(10)
 );

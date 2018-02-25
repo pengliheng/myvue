@@ -1,10 +1,14 @@
 <template>
 	<div class="home">
 		<h1>
-            message:{{ $route.params.id }}
+            message:{{ $route.params }}
         </h1>
 	</div>
 </template>
+
+<script>
+
+</script>
 
 <style lang="less">
 .font-dpr(@font-size){
@@ -17,7 +21,8 @@
         font-size: @font-size * 3;
     }
 }
+
 .home {
-	
+	padding: 0 0.5rem;
 }
 </style>
