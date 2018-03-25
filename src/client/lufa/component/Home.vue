@@ -1,8 +1,7 @@
 <template>
 	<div class="home">
-		<h1>
-            message:{{ $route.params }}
-        </h1>
+		<h1>首页</h1>
+        <p>也许应该都长成一个样子</p>
 	</div>
 </template>
 

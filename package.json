@@ -5,8 +5,9 @@
 	"homepage": "https://www.pipk.top",
 	"main": "dist/index.js",
 	"scripts": {
-		"nodemon": "set NODE_ENV=dev&& nodemon ./app.js --config nodemonrc.json",
+		"nodemon": "set NODE_ENV=dev&& nodemon ./src/server/app.js --config nodemonrc.json",
 		"t": "parcel test/index.html",
+		"b": "webpack --color --env.NODE_ENV=dev --progress",
 		"w": "webpack --color --watch --env.NODE_ENV=dev --progress",
 		"parcel": "parcel build test/index.html --public-url ./"
 	},
@@ -28,6 +29,8 @@
 		"babel-plugin-transform-vue-jsx": "^3.5.1",
 		"babel-preset-env": "^1.6.1",
 		"babel-register": "^6.26.0",
+		"eslint-config-airbnb-base": "^12.1.0",
+		"eslint-plugin-import": "^2.9.0",
 		"less": "^2.7.3"
 	},
 	"dependencies": {
@@ -35,10 +38,11 @@
 		"chai": "^4.1.2",
 		"clean-webpack-plugin": "^0.1.18",
 		"css-loader": "^0.28.9",
-		"extract-text-webpack-plugin": "^3.0.2",
+		"eslint-plugin-vue": "^4.3.0",
+		"extract-text-webpack-plugin": "4.0.0-beta.0",
 		"file-loader": "^1.1.6",
 		"font-awesome": "^4.7.0",
-		"html-webpack-plugin": "^2.30.1",
+		"html-webpack-plugin": "webpack-contrib/html-webpack-plugin",
 		"http": "^0.0.0",
 		"jquery": "^3.3.1",
 		"koa": "^2.4.1",
@@ -59,7 +63,9 @@
 		"vue-loader": "^14.1.1",
 		"vue-router": "^3.0.1",
 		"vue-template-compiler": "^2.5.13",
-		"webpack": "^3.10.0",
-		"webpack-merge": "^4.1.1"
+		"webpack": "^4.2.0",
+		"webpack-cli": "^2.0.13",
+		"webpack-merge": "^4.1.1",
+		"workbox-webpack-plugin": "^3.0.1"
 	}
 }

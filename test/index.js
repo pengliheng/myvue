@@ -1,45 +1,36 @@
-// // import styles from './index.less'
-// import Vue from 'vue';
-// import App from "./App.vue";
-// import router from "./router";
-// import "lib-flexible";
+const assert = require('assert');
 
-// new Vue({
-// 	el: '#app',
-// 	router,
-// 	data:{
-// 		message:'Hello id'
-// 	},
-// 	components: { App },
-// 	template: '<App/>'
-// })
+describe('Array', () => {
+  describe('RegExp test', () => {
+    it('RegExp test', () => {
+      const log = console.log;
+      const x = 7;
+      const obj = {
+        prop1: 1979,
+        prop2: 'Alice',
+        x,
+        prop3() {
+          log('call prop3');
+        },
+        get props4() {
+          return this.prop1 * 2;
+        },
+        set props4(val) {
+          log('success set');
+          this.prop11 = val;
+        },
+      };
+      obj.prop3();
+      log(obj.x);
+      log(obj.props4);
+      obj.prop4 = 5;
+      log(obj.props4);
 
-
-
-// // global variable
-// qwe = 'qwe'
-
-// local variable
-
-"use strict";
-
-let pingpong = (e => {
-  var PRIVATE = 0;
-  let let_private = 10;
-  return {
-    inc: e => {
-      PRIVATE += e;
-      return PRIVATE;
-    },
-    dec: e => {
-      PRIVATE -= e;
-      return PRIVATE;
-    }
-  }
-})()
-
-console.log(
-  pingpong.inc(3),
-  pingpong.inc(3),
-  pingpong.dec(10)
-);
+      // console.log(obj);
+      // assert.equal(
+      //   0.1 + 0.2,
+      //   0.30000000000000004,
+      // );
+    });
+  });
+});
