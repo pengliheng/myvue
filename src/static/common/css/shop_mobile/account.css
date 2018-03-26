@@ -1,0 +1,111 @@
+@charset "utf-8";
+/*Create by peng on 12.20.2017*/
+/* CSS Document */
+
+/* nav */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: 0;
+}
+body {
+    background-color: #F5F5F5;
+    font-family: "Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "\\5b8b体", sans-serif;
+    font-size: 0.62rem;
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #C83C3B;
+    font-size: 0.7rem;
+    color: #FFF;
+}
+.nav .back{
+    font-size: 0.75rem;
+}
+/* nav */
+/* dashboard */
+.back{
+    padding: 8px;
+    color:#FFFFFF;
+    line-height: 2rem;
+    text-align: center;
+    /*   width: 100%; */
+    background:#c83c3b;
+    height: 7vh;;
+}
+.back .backtrack{
+    font-size: 1rem;
+    color:#FFFFFF;
+    float:left;
+}
+.back .trolley{
+    font-size: 1.2rem;
+    margin-right: 12vw;
+    color:#FFFFFF;
+}
+.backtrack a{
+    color:#FFFFFF;
+    text-decoration:none;
+}
+.record{
+    font-size: 0.9rem;
+    /*margin-left: 30%;*/
+}
+.dashboard{
+    background-color: #c83c3b;
+    color: #fff;
+    padding: 10px 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 100;
+    color: #FFC9C9;
+}
+.dashboard .balance {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.dashboard .balance .balance-title {}
+.dashboard .balance .balance-content {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+}
+.dashboard .free-balance {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.dashboard .free-balance .free-balance-title {}
+.dashboard .free-balance .free-balance-content {
+    font-size: 1.4rem;
+    font-weight: 100;
+}
+/* dashboard */
+/* aisle */
+.aisle{
+    padding: 0 10px;
+    font-size: 1rem;
+    background: #FFFFFF;
+}
+.aisle .recharge .left {
+    font-weight: bolder;
+}
+.aisle .left{
+    color: #333333;
+    font-family: "宋体";
+}
+.aisle .right{
+    color: #999999;
+}
+.aisle .recharge ,.aisle .integral ,.aisle .free {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+/* aisle */

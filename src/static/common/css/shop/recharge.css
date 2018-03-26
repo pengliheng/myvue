@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/*
+
+Date:2017-12-20 10:55:00
+by pengliheng
+*/
+body{
+	background: red;
+}
+.container{
+	width: 1120px;
+	margin: 0 auto;
+	margin-top: 20px;
+}

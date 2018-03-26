@@ -1,0 +1,182 @@
+/*申请退换货*/
+.repairInfo{
+    margin: 20px auto;
+    width: 1200px;
+    height: 600px;
+    font-size: 14px;
+    border: 1px solid #E6E2E1;
+    background: #FFF;
+}
+.repairForm{
+    float: left;
+    height: 600px;
+    width: 880px;
+    padding: 10px 40px;
+    border-right: 1px solid #E6E2E1;
+}
+.applyTxt{
+    float: left;
+}
+.repairForm>div{
+    padding: 15px;
+}
+.statement{
+    height: 90px;
+}
+.reasonTxt{
+    position: absolute;
+    width: 400px;
+    height: 80px;
+    resize: none;
+    max-width: 400px;
+    max-height: 80px;
+    border:1px solid #CCC;
+}
+.submit:hover{
+    background: #d10003;
+}
+.submit{
+    width: 220px;
+    height: 45px;
+    text-align: center;
+    color: #FFF;
+    background: #DB3A3B;
+    margin-left: 84px;
+    cursor: pointer;
+}
+.sub-title{
+    position: relative;
+    width: 1200px;
+    margin: 10px auto;
+    height: 100%;
+    color: #8B8B8B;
+}
+.sub-title .present:hover{
+    color: #666;
+}
+.handle_good{
+    height:85px;
+}
+.handle_good span{
+    float: left;
+    margin: 25px 2px 0 0;
+}
+.handle_good .good_pic{
+    float: left;
+    width: 70px;
+    height:70px;
+    border: 1px solid #d2d2d2;
+}
+.handle_good .good_title{
+    float: left;
+    margin: 0 15px;
+    width: 300px;
+    height:50px;
+}
+.handle_reason select, .refund_amount input{
+    width: 210px;
+    height: 30px;
+    border-radius: 5px;
+    border:1px #CCC solid;
+}
+.refund_amount input{
+    color: #f84d4d;
+}
+.order_detail{
+    float: left;
+    width: 318px;
+}
+.order_detail h1{
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 10px;
+}
+.order_detail .pic_txt {
+    width: 280px;
+    margin: 10px 19px;
+    border-bottom: 1px #CCC solid;;
+}
+.order_detail .pic_txt img{
+    margin: 10px 60px;
+    width: 180px;
+    height: 180px;
+    border: 1px solid #AFAFAF;
+}
+.order_detail .pic_txt div{
+    margin: 10px 55px;
+}
+.order_info{
+    width: 280px;
+    margin: 15px;
+}
+.order_info ul{
+    margin-left: 60px;
+}
+.order_info ul li{
+    margin: 5px 0;
+}
+.picInfo{
+    height: 125px;
+}
+.picInfo span{
+    float: left;
+}
+.uploadPic{
+    float: left;
+    width: 100px;
+    height: 75px;
+    color: #AAA;
+    border-radius: 10px;
+    border: 1px dashed #CCC;
+    text-align: center;
+    cursor: pointer;
+}
+.uploadPic  h1{
+    line-height: 32px;
+    font-size: 45px;
+}
+.picInfo .imgDiv{
+    float: left;
+    margin-right: 10px;
+    width: 100px;
+    height: 75px;
+    border-radius: 10px;
+    border: 1px dashed #CCC;
+}
+input.uploadPic{
+    position: absolute;
+    opacity: 0;
+}
+.uploadBox{
+    position: relative;
+}
+.fill_img {
+    max-width: 100%;
+    height: 75px;
+}
+.img_list .img-div {
+    position: relative;
+    margin-right: 10px;
+    width: 100px;
+    height: 75px;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #CCC;
+}
+.img-div p {
+    color: #28a4b0;
+    margin: 0;
+}
+.deletePic{
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 25px;
+    position: absolute;
+    color: #f84d4d;
+    background: rgba(0,0,0,.4);
+    cursor: pointer;
+    display: none;
+}

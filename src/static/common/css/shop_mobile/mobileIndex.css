@@ -1,0 +1,614 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+li{
+    list-style: none;
+    display: inline-block;
+}
+a {
+    color: #444;
+    cursor: pointer;
+    text-decoration: none;
+}
+a, a:link {
+    color: #232326;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+img, iframe {
+    border: 0;
+}
+em{
+    font-weight: normal;
+    font-style: normal;
+}
+.fl{
+    float:left
+}
+.fr{
+    float:right;
+}
+body{
+    background-color: #f4f4f4;
+    padding-bottom: 60px;
+}
+.product-list-medium {
+    padding: 0 0;
+    background: #fff;
+    margin-top: 0.3rem;
+    padding-bottom: 0.5rem;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+.product-list ul {
+    overflow: hidden;
+    width: 100%;
+}
+.product-list ul li {
+    box-sizing: border-box;
+}
+.product-list-medium ul li {
+    float: left;
+    width: 46%;
+    border: 1px solid #eee;
+    position: relative;
+    margin: 1.5% 2%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.product-list-medium ul li .hot{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../img/images/hot.png) no-repeat center;
+    background-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.8rem;
+}
+.product-list-medium ul li .product-text{
+    background-color: #f7f7f7;
+}
+.product-list-medium ul li .product-text a{
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 0.3rem;
+}
+/*.product-list-medium ul li:first-child{
+    border: 1px solid #F2B3B3;
+}*/
+/*.product-list-medium ul li:first-child .product-text{
+    background-color: #C83C3B;
+}*/
+/*.product-list-medium ul li:first-child .product-text h4{
+    color: #eee;
+}*/
+/* .product-list-medium ul li:first-child .product-text .p-price{
+    color: #fff;
+} */
+.product-div {
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.product-div a {
+    position:relative;
+    display: block;
+    text-align: center;
+}
+a img {
+    border: 0;
+}
+.product-div img {
+    width: 150px;
+    height: 150px;
+    margin-top: 7px;
+}
+.product-list-medium .product-text {
+    padding: 0.5rem 0.3rem 0.2rem;
+}
+.product-text h4 {
+    display: block;
+    overflow: hidden;
+}
+.product-list-medium h4, .product-list-small h4 {
+    font-size: 0.65rem;
+}
+.product-text h4 {
+    padding-right: 2.3rem;
+}
+.index-product-text h4,.index-product-text p {
+    padding-right: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+}
+.index-product-text p {
+    font-size: 0.6rem;
+    line-height: 1rem;
+}
+.product-text p {
+}
+.t-first {
+    color: #ec5151;
+}
+.p-price {
+    clear: both;
+    overflow: hidden;
+}
+.product-list-medium .p-price {
+    font-size: 0.7rem;
+    display: inline-block;
+    margin-top: 0.3rem;
+}
+.product-text .p-t-remark {
+    color: #999;
+    padding-bottom: 0;
+}
+.product-list-medium .p-t-remark {
+    font-size: 1.2rem;
+    padding-top: .2rem;
+    display: none;
+}
+.self-run-tag {
+    font-size: 1rem;
+    color: red;
+    border: 1px solid red;
+    border-radius: 3px;
+}
+.box-flex {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-box-flex: 1;
+    box-flex: 1;
+    display: block;
+    width: 100%;
+}
+.product-list-medium .icon-flow-cart {
+    right: .6rem;
+    bottom: .6rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    display: none;
+}
+.icon-flow-cart i.icon-gouwuche {
+    color: #fff;
+}
+.product-list-medium .icon-flow-cart i.icon-gouwuche {
+    font-size: 1.8rem;
+}
+/*头部*/
+.show_header{
+    background-color:#C83C3B;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:10;
+    width:100%;
+    padding:0 0.475rem 0 0.275rem;
+    box-shadow: 0 0px 15px -2px #908989;
+    height: 1.925rem;
+    display: flex;
+}
+.show_header:after{
+    content:'';
+    display:block;
+    height:0;
+    clear:both;
+    visibility: hidden;
+}
+.show_header .shoplogo{
+    width:3.4rem;
+    display: inline-block;
+    margin-top: 0.3rem;
+}
+.show_header .shoplogo img{
+    width:100%;
+}
+.show_header .searchbox{
+    position: relative;
+    margin-left: 3%;
+    display: flex;
+    margin-top: 0.25rem;
+    flex: 1;
+    border-radius: 15px;
+    background: #de8a89;
+    height: 1.5rem;
+}
+.show_header .searchbox input{
+    outline:none;
+    height: 1.5rem;
+    flex: 1;
+    padding: 0 0.3rem;
+    line-height: 1rem;
+    overflow: hidden;
+    background: none;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #ebb9b8;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #ebb9b8;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #ebb9b8;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #ebb9b8;
+}
+.show_header .searchbox .iconfont{
+    float:right;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    /*padding-left: 0.2rem;*/
+    margin-right: 0.5rem;
+}
+.shop_banner{
+    height:11rem;
+    margin-top:1.925rem;
+}
+.shop_banner img{
+    height:11rem;
+    width:100%;
+}
+.goods_favour{
+    background-color:#fff;
+    padding-bottom:10px;
+}
+.back .txttitle{
+    background: #fff;
+    color: #990e0e;
+    border-bottom: 1px solid #f0f0f0;
+}
+.txttitle{
+    padding:1rem;
+    font-size: 0.7rem;
+    position: relative;
+}
+.txttitle em{
+    margin: 0 auto;
+    position: relative;
+    width: 9.5rem;
+    text-align: center;
+    color: #333;
+    font-size: 0.8rem;
+    background: url(../../img/images/mb-title.png) no-repeat center;
+    background-size: contain;
+    display: block;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.more{
+    color: #C83C3B;
+    font-size: 0.7rem;
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0.5rem 0.5rem 0;
+    border-top: 1px solid #F4D7D7;
+}
+.more i{
+
+}
+.goods_favour .youhui .swiper-wrapper{
+    display: flex;
+    justify-content: space-around;
+
+}
+.goods_favour .youhui .swiper-wrapper .swiper-slide{
+    overflow:hidden;
+    text-align: center;
+    width:31%;
+    margin-top: 10px;
+    font-size: 0.6rem;
+}
+.goods_favour .youhui .swiper-wrapper .swiper-slide img{
+    width: 89px;
+    height: 99px;
+}
+.new_p{
+    color:#990e0e;
+}
+.old_p{
+    text-decoration: line-through;
+    color:#ccc;
+}
+.goods_quan{
+    background-color:#fff;
+    padding:10px 5px 10px;
+    margin-top: 0.3rem;
+}
+.goods_quan img{
+    width:100%;
+    height:100%;
+}
+.goods_quan .txttitle{
+    background-color:#fff;
+    padding-left:5px;
+    padding-right:5px;
+    font-size: 0.7rem;
+    color: #C83C3B;
+    text-align: center;
+    padding: 0;
+    border-bottom: none;
+    position: relative;
+    width: 8rem;
+    margin: 0 auto;
+}
+.goods_quan .txttitle:before,.goods_quan .txttitle:after{
+    background: #F9B6AB;
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    width: 20%;
+}
+.goods_quan .txttitle:before{left: -5px;}
+.goods_quan .txttitle:after{right: -5px;}
+.goods_quan .youhuiquan .swiper-wrapper{
+    display: flex;
+    justify-content: space-between;
+
+}
+.goods_quan .youhuiquan .swiper-wrapper .swiper-slide{
+    overflow:hidden;
+    text-align: center;
+    width:30%;
+}
+.goods_quan .youhuiquan .swiper-wrapper .swiper-slide img{
+    width:100%;
+}
+
+.goods_quan .iconfont,.goods_favour .iconfont{
+    margin-right:10px;
+}
+footer{
+    color: #ccc;
+}
+footer p{
+    text-align: center;
+    font-size: 0.7rem;
+    margin-top:20px;
+    margin-bottom: 10px;
+}
+footer p i{
+    font-size: 0.8rem;
+}
+@media (min-width:750px){
+    .shop_banner {
+        height: 225px;
+    }
+    .shop_banner img{
+        height: 225px;
+    }
+    .show_header .searchbox {
+        width: 80%;
+    }
+    .show_header .searchbox input {
+        width: 91%;
+    }
+}
+.product-list-big>div{
+    margin-bottom:4px;
+}
+.product-list-big .txttitle{
+    font-size: 16px;
+}
+.product-list-big .txttitle .iconfont{
+    font-size: 22px;
+    margin-right:10px;
+}
+.goods_quan .youhuiquan_big ul{
+    display:flex;
+    justify-content:space-between;
+}
+
+/*优惠券*/
+.stamp {
+    background: #D24161;
+    background: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 5px, #D24161 5px);
+    background-size: 15px 15px;
+    background-position: 9px 3px;
+    width: 100%;
+    height: 80px;
+    padding: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+.stamp:before {
+    background-color:#D24161;
+    content: '';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    /*z-index: -1;*/
+}
+.stamp:after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    /*box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);*/
+    /*z-index: -2;*/
+}
+.stamp div{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+.stamp h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.6rem;
+}
+.stamp .full{
+    font-size: 0.6rem;
+    margin-top: 5px;
+}
+.stamp .using{
+    width: 90%;
+    background-color: #fff;
+    color: #211f1f;
+    font-size: 0.6rem;
+    margin-left: 5%;
+    text-align: center;
+    line-height: 1rem;
+    box-shadow: 0px 4px 10px 1px #821313;
+}
+
+section .block{
+    width: 100%;
+    height: 50px;
+}
+.menu{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    background: #FFF;
+    border-top: 1px solid #CCC;
+}
+.menu li{
+    position: relative;
+    margin: 0 auto;
+    width: 49.5%;
+    float: left;
+    font-size: 2.2rem;
+    text-align: center;
+    line-height: 50px;
+}
+.menu li:first-child{
+    border-right: 2px solid #CCC;
+}
+.menu li a{
+    font-family: "楷体","楷体_GB2312";
+    font-weight: 800;
+    display:block;
+}
+
+
+/*李伟剑  2017-12-05*/
+.shuoming{
+    width: 100%;
+    background: #fff;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+.shuoming ul{
+    width: 100%;
+    display: flex;
+    padding: 0 0.3rem;
+}
+.shuoming ul li{
+    flex: 1;
+    text-align: center;
+}
+.shuoming ul li p{
+    color: #999999;
+    font-size: 0.6rem;
+}
+.shuoming ul li i{
+    font-size: 1.3rem;
+    color: #666666;
+}
+.shuoming ul .icon-fint{
+    font-size: 1.5rem;
+}
+.shuoming ul .icon-p{
+    margin-top: -0.2rem;
+}
+.youhuiquan_big ul {
+    background: #fff;
+    padding: 0.5rem 0;
+}
+.youhuiquan_big ul li{
+    width: 30%;
+    background: url(../../img/images/youhui_mobile.png) no-repeat left top;
+    background-size: 100%;
+    color: #C83C3B;
+}
+.youhuiquan_big ul li .youhui-top{
+    width: 100%;
+    float: left;
+    height: 1.65rem;
+    overflow: hidden;
+    margin-left: 0.3rem;
+}
+.youhuiquan_big ul li .youhui-top p{
+    font-size: 0.5rem;
+    float: left;
+    margin-top: 0.3rem;
+}
+.youhuiquan_big ul li .youhui-top p em{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.youhuiquan_big ul li .youhui-top span{
+    font-size: 0.4rem;
+    float: left;
+    line-height: 0.6rem;
+    margin-top: 0.2rem;
+    margin-left: 0.2rem;
+}
+.youhuiquan_big ul li a{
+    color: #fff;
+    width: 100%;
+    line-height: 1.075rem;
+    font-size: 0.55rem;
+    text-align: center;
+    float: left;
+    background: url(../../img/images/youhui_a.png) no-repeat center;
+    background-size: cover;
+}
+#top{
+    position: fixed;
+    right: 10px;
+    bottom: 70px;
+    background: rgba(184, 71, 71,0.5);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 99;
+    display: none;
+}
+#top i{
+    line-height: 28px;
+    color: #fff;
+    font-size: 18px;
+}
+/* 活动 */
+.activity{
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    text-align: center;
+    margin: 0.3rem;
+    font-size: 0.4rem;
+    font-family: HiraginoSansGB-W3;
+    color: #fff;
+    background: rgba(220,0,0,0.7);
+    padding: 0.1rem 0.3rem;
+    border-radius: 2.5pt;
+}

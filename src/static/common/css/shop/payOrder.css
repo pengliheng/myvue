@@ -1,0 +1,464 @@
+/*Create by Li Weijian on 11.02.2017*/
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,caption{padding: 0; margin: 0;}
+fieldset,img{border: none;}
+table{border-collapse: separate; border-spacing: 0;}
+ol,ul,li{list-style: none; list-style-type: none;}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight: normal; font-style: normal;}
+caption,th{text-align: left;}
+h1,h2,h3,h4,h5,h6{font-weight: normal; font-size: 100%;}
+q:before,q:after{content: '';}
+abbr,acronym{border: 0;}
+a{text-decoration: none; color: black;cursor: pointer;}
+input:-webkit-autofill{-webkit-box-shadow: 0 0 0px 1000px white inset;}
+body{font-size: 16px;}
+*,*:before,*:after{-webkit-box-sizing: border-box; box-sizing: border-box;}
+.clearfix{display: block;}
+.clearfix:after{content: " "; display: block; height: 0; clear: both; visibility: hidden;}
+sup { vertical-align: super;}
+sub { vertical-align: sub;}
+a, a:link, a:visited, a:hover, a:active{text-decoration:none;}
+
+body{
+    background: #f1f1f1;
+}
+.container{
+    width: 1200px;
+    margin: 15px auto;
+}
+a:hover, a.m-link:hover {
+    color: #e52142;
+}
+/* pay order start*/
+.payOrder-warp{ overflow:hidden; margin-bottom:50px;}
+.payOrder-warp .payOrder-desc{ background:url(../..//img/images/payorder.png) #fff 66px 51px no-repeat; padding:0 60px 45px 300px;}
+.payOrder-desc .pay-top{ padding-top:25px; overflow:hidden;}
+
+.pay-top h3{ font-size:24px; font-weight:bold; color:#555; float:left;}
+.pay-top .pay-total{ float:right; line-height:36px;}
+.pay-top .pay-total span{ float:left; font-size:14px; color:#8c8c8c;}
+.pay-top .pay-total .pay-price{ font-size:24px; float:left; text-align:right; min-width:120px; color:#f42424;}
+
+.payOrder-desc .pay-txt{ font-size:14px; line-height:22px; padding:8px 0 5px;}
+.payOrder-desc .pay-txt em{ color:#ff8f23;}
+.payOrder-desc .o-list{ margin-top:10px;}
+.payOrder-desc .o-list .o-list-info{ font-size:14px; overflow:hidden; line-height:23px;}
+.payOrder-desc .o-list .o-list-info span{ margin-right:8px;}
+.payOrder-desc .o-list .o-list-info #spname{ display:block; width:100%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; height:24px;}
+.payOrder-desc .o-list .o-list-info .opened{ float:right;}
+.payOrder-desc .o-list .o-list-info .opened .iconfont{ font-size:12px; margin-left:6px;}
+.payOrder-desc .orderPrint{ font-size:14px; margin-top:5px; display:inline-block;}
+
+.payOrder-mode{ margin-top:10px; background-color:#fff; padding:30px;}
+.payOrder-mode .p-mode-tit{ padding-bottom:15px; border-bottom:1px solid #d2d2d2;}
+.payOrder-mode .p-mode-tit h3{ font-size:18px; height:18px; line-height:18px; padding-left:10px; border-left:4px solid #f42424;}
+.payOrder-mode .p-mode-list{ margin-top:20px; width:calc(100% + 12px); overflow:hidden;}
+.payOrder-mode .p-mode-item{ float:left; width:178px; height:88px; border:1px solid #d2d2d2; text-align:center; position:relative; margin:0 12px 12px 0;}
+
+.payOrder-mode .payOrder-list{ margin-bottom:30px;}
+.payOrder-mode .payOrder-list:last-child{ margin-bottom:0;}
+
+.p-mode-item a{ font-size:18px; width:178px; height:88px;}
+.p-mode-item a img{
+    margin-top: 15px;
+}
+.p-mode-item .b-pay i{ width:25px; height:25px; background:url(../..//img/images/dsc-icon.png) -66px -45px no-repeat; display:inline-block; vertical-align:middle; margin:-3px 8px 0 0;}
+.p-mode-item .b-pay span{ display:inline-block; height:25px; line-height:25px; color:#555;}
+.p-mode-item.selected{ border-color:#f42424;}
+
+.shopend-warp{}
+.shopend-warp:after{ content: ' '; display: block; clear: both; height: 0; visibility: hidden;}
+.alibg{
+    overflow:hidden;
+    position: fixed;
+    top: 20%;
+    left: 33%;
+    z-index: 20;
+    display: none;
+    padding: 10px;
+    background: rgba(0,0,0,0.1);
+}
+.no_enough{
+    overflow:hidden;
+    position: fixed;
+    top: 20%;
+    left: 33%;
+    z-index: 20;
+    display: none;
+    padding: 10px;
+    background: rgba(0,0,0,0.1);
+}
+.shopend-info{
+    background: #fff;
+    /*width: 506px;*/
+    height: 349px;
+    padding: 50px;
+}
+a.btn {
+    display: inline-block;
+    white-space: nowrap;
+}
+.sc-red-btn {
+    border-color: #f42424;
+    color: #f42424;
+}
+.btn {
+    padding: 0 10px;
+    height: 23px;
+    line-height: 23px;
+    border: 1px solid #f42424;
+    display: inline-block;
+    color: #f42424;
+    background-color: #fff;
+    margin-right: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.sc-redBg-btn {
+    background: #f42424;
+    border-color: #f42424;
+    color: #fff;
+}
+.sc-redBg-btn:hover {
+    background: #ec5051;
+    color: #fff;
+}
+.shopend-info .s-i-left{ width:80px; height:80px; float:left;}
+.shopend-info .s-i-left i{ background:url(../..//img/images/pprompt-icon.png) no-repeat; width:80px; height:80px; display:inline-block;}
+.shopend-info .s-i-left i.ico-success{ background-position:0 0;}
+.shopend-info .s-i-left i.ico-fail{ background-position:-86px 0;}
+.shopend-info .s-i-right{ width:calc(100% - 110px); margin-left:30px; float:left;}
+.shopend-info .s-i-right h3{ font-size:24px; font-weight:bold;}
+.shopend-info .s-i-right .s-i-tit{ margin-top:15px; font-size:14px;}
+.shopend-info .s-i-right .s-i-tit p{ line-height:25px;}
+.shopend-info .s-i-right .s-i-tit em{ color:#ff8f23;}
+.s-i-btn{ margin-top:15px;}
+.s-i-btn a{ width:138px; height:38px; line-height:38px; font-size:14px; text-align:center; padding:0; margin-right:16px;}
+.s-i-btn a:last-child{ margin-right:0;}
+.sc-red-btn:hover {
+    background-color: #ef1c1c;
+    color: #fff;
+}
+.alibg .pb-x,.no_enough .pb-x{
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    z-index: 20;
+    top: 20px;
+    right: 20px;
+    overflow: hidden;
+    width: 13px;
+    height: 13px;
+    background: url(../..//img/images/dialog.png) no-repeat;
+    font-size: 0;
+    text-indent: -99999px;
+}
+
+.no_records {
+    /*height: 104px;*/
+    /*padding: 70px 0 70px 165px;*/
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    padding: 50px;
+}
+.no_records .no_icon_two {
+    width: 188px;
+    height: 104px;
+    display: block;
+    float: left;
+    background: url(../..//img/images/not-wait-icon.png) no-repeat;
+}
+.no_records .no_info_line {
+    line-height: normal;
+}
+.no_records .no_info {
+    float: left;
+    margin-left: 25px;
+    line-height: 104px;
+}
+.no_records .no_info_line h3 {
+    margin-top: 15px;
+}
+
+.no_records h3 {
+    color: #8c8c8c;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+}
+.no_records .no_info_line .no_btn {
+    display: block;
+    margin-top: 15px;
+}
+.shopend-info-many{ width:825px; margin:0 auto;}
+.shopend-info-many .shopend-info .s-i-right{ margin:9px 0 9px 30px;}
+.shopend-info-many .shopend-info .s-i-right .txt{ font-size:14px; line-height:26px; display:block; float:left;}
+
+.shopend-info-items{ width:calc(100% + 25px); overflow:hidden;}
+.shopend-info-items .shopend-info-item{ float:left; padding:15px; width:368px; border:1px dashed #dcdcdc; margin:0 25px 20px 0; font-size:14px;}
+.shopend-info-items .shopend-info-item p{ line-height:25px;}
+.shopend-info-items .shopend-info-item em{ color:#ff8f23}
+.shopend-info-many .s-i-btn{ text-align:center;}
+
+.bank_list li{ float:left; width:178px; height:40px; border:1px solid #d2d2d2; text-align:center; position:relative; margin:0 12px 12px 0; cursor:pointer;}
+.bank_list li a{ font-size:18px; display:table-cell; width:178px; height:40px; vertical-align:middle; cursor:pointer;}
+.bank_list li a img{ cursor:pointer;}
+.bank_list li.selected{ border-color:#f42424;}
+
+.pay_button { overflow:hidden; padding:30px 0 20px}
+.pay_button input,.pay_button .noBtn{ height: 50px;line-height: 50px;color: #fff;font-size: 18px;width: 220px;font-family: "Microsoft Yahei";font-weight: 700;border: none;vertical-align: middle; cursor:pointer; text-align: center;border-radius: 2px;outline:0; background-color:#f42424; display:none;}
+.pay_button .noBtn{ background: #b5b5b5; display:block; cursor: default;}
+.pay_button *{ float:left;}
+
+.p-mode-list .balance a{ height:88px;display: block; background:url(../..//img/images/balance-icon.png) center center no-repeat; font-size:0;}
+.ftx-05 {
+    color: #438cde;
+}
+.pb {
+    background-color: rgba(0,0,0,.1);
+    padding: 8px;
+    position: fixed;
+    background-color: #ccc\9;
+}
+#scanCode .cboxContent {
+    background-image: url(../..//img/images/pay_qcode_bg.jpg) !important;
+}
+.pb .cboxContent {
+    /* width: 532px; */
+    height: 355px;
+    background-color: white;
+}
+.pb-hd {
+    position: relative;
+    padding: 0 16px;
+    height: 31px;
+    line-height: 31px;
+    /* background: #f3f3f3; */
+}
+.pb-hd .pb-x {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    z-index: 20;
+    top: 10px;
+    right: 16px;
+    overflow: hidden;
+    width: 13px;
+    height: 13px;
+    background: url(../..//img/images/dialog.png) no-repeat;
+    font-size: 0;
+    text-indent: -99999px;
+}
+.pb-hd .pb-title {
+    font-weight: normal;
+    font-size: 14px;
+    color: #666;
+    font-family: "Microsoft YaHei";
+}
+#scanCode .pb-bd {
+    padding: 0;
+}
+.pb-ct div{
+    margin-top: 76px;
+    margin-left: 26px;
+    text-align: center;
+}
+.pb-bd {
+    padding: 10px;
+    overflow: auto;
+    /* background: #fff; */
+    position: relative;
+}
+#scanCode{
+    top:20%;
+    left: 33%;
+    display: none;
+}
+
+.cart-filter {
+    width: 100%;
+    height: 36px;
+    position: relative;
+}
+.cart-filter .cart-stepflex {
+    margin-top: 10px;
+    float: left;
+}
+.cart-step-item {
+    float: left;
+}
+.cart-step-item.curr span {
+    background-color: #ff8f23;
+    border-color: #ff8f23;
+    color: #fff;
+}
+.cart-step-item span {
+    display: inline-block;
+    float: left;
+    width: 126px;
+    height: 34px;
+    line-height: 30px;
+    text-align: center;
+    color: #8c8c8c;
+    font-size: 14px;
+    border: 1px solid #e3e3e3;
+    border-radius: 18px;
+}
+.cart-step-item.curr .iconfont, .cart-step-item.cur .iconfont {
+    color: #ff8f23;
+}
+.cart-step-item .iconfont {
+    font-size: 25px;
+    width: 13px;
+    margin: 1px 12px 0;
+    display: inline-block;
+    vertical-align: middle;
+    color: #d2d2d2;
+}
+.cart-step-item {
+    float: left;
+}
+
+.sub-title {
+    position: relative;
+    width: 1200px;
+    margin: 10px auto;
+    height: 100%;
+}
+/*2017-12-13 改版新加样式*/
+.pay-detail{
+    width: 100%;
+    background-color: #f7f5f5;
+    border: 1px solid #E6E2E1;
+    color: #333;
+    font-size: 14px;
+    padding:10px 21px;
+    line-height: 26px;
+    margin-top: 24px;
+}
+.pay-detail .pay-detail-number{
+    border-bottom: 1px solid #E6E2E1;
+}
+.pay-detail p{
+    margin: 8px 0;
+}
+.pay-detail .pay-detail-number p span{
+    float: right;
+}
+.pay-detail .pay-detail-number p span em{
+    color: #db3a3b;
+    font-size: 16px;
+}
+.payment-method{
+    border: 1px solid #E6E2E1;
+    width: 100%;
+    margin-top: 25px;
+}
+.payment-method ul{
+    overflow: hidden;
+}
+.payment-method ul li{
+    float: left;
+    border-right: 1px solid #E6E2E1;
+    display: block;
+    margin: 20px 0;
+    padding: 0 37px;
+}
+.payment-method ul li:last-child{
+    border-right: none;
+}
+.payment-method ul li img{
+    width: 100%;
+    cursor: pointer;
+}
+/*支付宝支付*/
+.alipay-code,.wxpay-code{
+    overflow: hidden;
+    display: none;
+}
+.alipay-code-number{
+    font-size: 14px;
+    width: 100%;
+    color: #333;
+    line-height: 45px;
+}
+.alipay-code-number span{
+    float: right;
+}
+.alipay-code p span{
+    float: right;
+}
+.alipay-code p span em,.alipay-code-number span em{
+    font-size: 16px;
+    color: #db3a3b
+}
+.alipay-qrcode{
+    border: 1px solid #e6e2e1;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+.alipay-qrcode-top{
+    font-size: 22px;
+    color: #333;
+    margin-left: 20px;
+    line-height: 45px;
+}
+.alipay-qrcode-top span{
+    font-size: 14px;
+    margin-left: 40px;
+}
+.alipay-qrcode-top span em{
+    color: #db3a3b;
+}
+.alipay-qrcode-w{
+    overflow: hidden;
+    margin-left: 170px;
+}
+.alipay-qrcode-l{
+    float: left;
+}
+.alipay-qrcode-img{
+    border: 1px solid #e6e2e1;
+    padding: 20px;
+}
+.alipay-qrcode-scan{
+    background-color: #1d82d2;
+    padding: 10px 0 10px 45px;
+    margin-top: 25px;
+}
+
+.alipay-qrcode-scan img{
+    width: 46px;
+    float: left;
+    margin-right: 10px;
+}
+.alipay-qrcode-scan p{
+    color: #fff;
+    font-size: 14px;
+}
+.alipay-qrcode-mobile{
+    float: left;
+
+}
+.alipay-qrcode-mobile img{
+    width: 100%;
+}
+.pay-back{
+    color: #4a93ff;
+    font-size: 14px;
+    margin-left: 20px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.pay-back i{
+    font-size: 20px;
+    float: left;
+    margin-right: 25px;
+}
+/*微信支付*/
+.wxpay-qrcode-scan{
+    background-color: #E84712;
+}

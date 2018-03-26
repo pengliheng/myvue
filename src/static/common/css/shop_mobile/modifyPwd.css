@@ -1,0 +1,107 @@
+/*Create by Li Weijian on 27.11.2017*/
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,caption{padding: 0; margin: 0;}
+fieldset,img{border: none;}
+table{border-collapse: separate; border-spacing: 0;}
+ol,ul,li{list-style: none; list-style-type: none;}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight: normal; font-style: normal;}
+caption,th{text-align: left;}
+h1,h2,h3,h4,h5,h6{font-weight: normal; font-size: 100%;}
+q:before,q:after {
+    content: '';
+}
+abbr,acronym {
+    border: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+body{
+    background-color: #f1f1f1;
+    /* padding: 0.3rem; */
+    font-family: "Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "\\5b8b体", sans-serif;
+}
+*{box-sizing: border-box;}
+input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset;}
+html{font-size: 20px !important;}
+@media only screen and (min-width: 414px){html{font-size: 22.08px !important;}}
+@media only screen and (min-width: 400px){html{font-size: 21.33px !important;}}
+@media only screen and (min-width: 480px){html{font-size: 25.6px !important;}}
+.back{
+    padding: 8px;
+    color:#FFFFFF;
+    line-height: 1.2rem;
+    text-align: center;
+    width: 100%;
+    background:#c83c3b;
+}
+.back .backtrack{
+    font-size: 0.7rem;
+    color:#FFFFFF;
+    float:left;
+}
+.back .trolley{
+    margin-right: 2rem;
+    font-size: 0.9rem;
+    color:#FFFFFF;
+}
+.backtrack a{
+    color: #fff;
+}
+.pwdForm{
+    position: absolute;
+    width: 100%;
+    height: 17rem;
+    background: #FFF;
+}
+.pwdForm .items{
+    margin: 2rem auto;
+    width: 90vw;
+    border: 1px silver;
+}
+.pwdForm .items .item{
+    height: 2.4rem;
+    width: 90vw;
+    border-bottom: 1px #EEEEEE solid;
+    margin: 0.8rem 0;
+}
+.pwdForm .items .iconfont {
+    margin: 0.4rem;
+    float: left;
+    width: 2rem;
+    height: 1.4rem;
+    border-right: 1px #CCC solid;
+    text-align: left;
+    font-size: 1.2rem;
+}
+.pwdForm .items .pwd{
+    margin-left: 0.8rem;
+    height: 2rem;
+    width: 10rem;
+    border:none;
+    outline:medium;
+    font-size: 0.75rem;
+}
+.pwdForm .items .editPwd{
+    margin: 2rem auto;
+    width: 90vw;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.6rem;
+    background: #C83C3B;
+    color: #FFF;
+    text-align: center;
+    border-radius: 4px;
+}
+.pwdForm .savePwd{
+    margin-top:2rem;
+    text-align: center;
+    font-size: 0.7rem;
+    height: 2rem;
+    color:#FFFFFF;
+    background: #c83c3b;
+    border-radius: 4px;
+    line-height: 2rem;
+}

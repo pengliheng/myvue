@@ -1,0 +1,43 @@
+.content .preferential-bk {
+    width: calc(100vw - 52px);
+    height: 42vw;
+    background-size: cover;
+}
+
+.content .preferential-bk2 {
+    width: calc(100vw - 52px);
+    height: 39vw;
+    background-size: cover;
+    padding: 7vw 15vw;
+    display: inline-flex;
+    flex-flow: wrap;
+    color: #000;
+    font-size: 1rem;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.content .preferential-bk2  .description{
+    font-size: 1.5rem;
+    height: calc(39vw * 0.47);
+    color: #222;
+}
+
+
+.content .preferential-bk2  .time{
+    font-size: 0.9rem;
+    color: #444;
+    
+}
+
+
+.content .preferential-bk2  .note{
+    font-size: 0.9rem;
+    color: #444;
+}
+.navList a:nth-child(4){
+    color:#B1191A;
+}
+.navList a:nth-child(2){
+    color: black!important;
+}

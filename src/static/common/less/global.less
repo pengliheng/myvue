@@ -1,0 +1,113 @@
+/*Create by Li Weijian on 2018.01.25*/
+@charset "utf-8";
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,caption{padding: 0; margin: 0;}
+fieldset,img{border: none;}
+table{border-collapse: separate; border-spacing: 0;}
+ol,ul,li{list-style: none; list-style-type: none;}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight: normal; font-style: normal;}
+caption,th{text-align: left;}
+h1,h2,h3,h4,h5,h6{font-weight: normal; font-size: 100%;}
+q:before,q:after{content: '';}
+abbr,acronym{border: 0;}
+a{text-decoration: none; color: black;cursor: pointer;}
+input:-webkit-autofill{-webkit-box-shadow: 0 0 0px 1000px white inset;}
+*,*:before,*:after{-webkit-box-sizing: border-box; box-sizing: border-box;}
+.clearfix{display: block;}
+.clearfix:after{content: " "; display: block; height: 0; clear: both; visibility: hidden;}
+sup { vertical-align: super;} 
+sub { vertical-align: sub;} 
+a, a:link, a:visited, a:hover, a:active{text-decoration:none;} 
+
+.font-dpr(@font-size){ 
+	font-size: @font-size; 
+	[data-dpr="1"] & { font-size: @font-size / 2; } 
+	[data-dpr="3"] & { font-size: @font-size * 1.5; } 
+}
+body{
+	margin: 80/75rem 0 0 0 !important;
+	padding: 0;
+}
+.back{
+	padding:0 0.11rem;
+	.font-dpr(38px);
+	color: #fff;
+	line-height: 1.07rem;
+	text-align: center;
+	height: 1.07rem;
+	width: 100%;
+	background: #c83c3b;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:9;
+	.backtrack{
+		.font-dpr(28px);
+		position: absolute;
+		left: 0;
+		a{
+			color: #fff;
+			i{
+				.font-dpr(28px);
+			}
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}
+input::-webkit-input-placeholder{
+	.font-dpr(28px);
+	color:#CCCCCC;
+	}
+	input::-moz-placeholder{  
+	  .font-dpr(28px);
+	  color:#CCCCCC;
+	}
+	input:-moz-placeholder{   
+	  .font-dpr(28px);
+	  color:#CCCCCC;
+	}
+	input:-ms-input-placeholder{ 
+	  .font-dpr(28px);
+	  color:#CCCCCC;
+	}
+/* 活动列表 */
+@import url(activityList.less);
+/*编辑个人信息*/
+@import url(message.less);
+/*分享*/
+@import url(shareus.less);
+/*我的账户*/
+@import url(account.less);
+/*充值*/
+@import url(reset.less);
+/*优惠券*/
+@import url(mobileDiscount.less);
+/*我的订单*/
+@import url(mobileecy.less);
+/*登陆*/
+@import url(sysLoginMobile.less);
+/*修改密码*/
+@import url(modifyPwd.less);
+/*地址管理*/
+@import url(address.less);
+/*编辑地址*/
+@import url(add_address.less);
+/*会员中心*/
+@import url(centermobile.less);
+/*底部导航*/
+@import url(header_nav.less);
+/*购物车*/
+@import url(goods_car.less);
+/*分类*/
+@import url(goods_list.less);
+/*首页*/
+@import url(mobileIndex.less);
+/*商品详情*/
+@import url(goods_details.less);
+/*确认订单*/
+@import url(statements.less);
+/*活动详情*/
+@import url(activity.less);
+/*礼品卡*/
+@import url(giftCard.less);

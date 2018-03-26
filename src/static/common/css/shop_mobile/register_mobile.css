@@ -1,0 +1,123 @@
+/*Create by Li Weijian on 11.23.2017*/
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,caption{padding: 0; margin: 0;}
+fieldset,img{border: none;}
+table{border-collapse: separate; border-spacing: 0;}
+ol,ul,li{list-style: none; list-style-type: none;}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight: normal; font-style: normal;}
+caption,th{text-align: left;}
+h1,h2,h3,h4,h5,h6{font-weight: normal; font-size: 100%;}
+q:before,q:after {
+  content: '';
+}
+abbr,acronym {
+  border: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+body{
+  background-color: #f1f1f1;
+  padding: 0.3rem;
+  font-family: "Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "\\5b8b体", sans-serif;
+}
+*{box-sizing: border-box;}
+input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset;}
+html{font-size: 20px !important;}
+@media only screen and (min-width: 414px){html{font-size: 22.08px !important;}}
+@media only screen and (min-width: 400px){html{font-size: 21.33px !important;}}
+@media only screen and (min-width: 480px){html{font-size: 25.6px !important;}}
+.register {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  min-height: 96vh;
+}
+.register .register_title {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+.register .register_title h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #990e0e;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#f18b8b), to(#910505));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.register form {
+  width: 100%;
+  padding: 0.8rem 1rem 0 1rem;
+}
+.register form p {
+  border: 1px solid #eee;
+  margin-bottom: 0.8rem;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  height: 2rem;
+  line-height: 1.9rem;
+  color: #666;
+  display: flex;
+  padding: 0 0.3rem;
+}
+.register form p label {
+  width: 3.2rem;
+  display: inline-block;
+}
+.register form p input {
+  flex: 1;
+  border: none;
+  outline: none;
+  color: #333;
+}
+.register form p input::-webkit-input-placeholder {
+  color: #ddd;
+}
+.register form p input:-moz-placeholder {
+  color: #ddd;
+}
+.register form p input::-moz-placeholder {
+  color: #ddd;
+}
+.register form p input:-ms-placeholder {
+  color: #ddd;
+}
+.register form p:nth-child(2) {
+  padding-right: 0;
+}
+.register form p:nth-child(2) input {
+  width: 5rem;
+}
+.register form p:nth-child(2) span {
+  display: inline-block;
+  width: 4rem;
+  background-color: #ddd;
+  text-align: center;
+  font-size: 0.6rem;
+}
+.send-disabled {
+  pointer-events: none;
+  color: #777;
+}
+.register form .re_btns {
+  margin: 0 auto;
+  width: 93%;
+}
+.register form .re_btns button {
+  width: 45%;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  line-height: 1.8rem;
+  outline: 0;
+  font-size: 0.7rem;
+  background: #990e0e;
+  color: #fff;
+}
+.register form .re_btns button:nth-child(2) {
+  float: right;
+  background: #fdf4f4;
+  color: #666;
+}

@@ -1,0 +1,140 @@
+.center {
+  .bank {
+    background-color: #fff;
+    .top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      align-items: center;
+      border-bottom: 1px solid #eeeeee;
+      .left {
+        img {
+          width: 2rem;
+        }
+      }
+    }
+  }
+  .bottom {
+    color: #ccc;
+    padding: 5px;
+  }
+  .moneny {
+    margin-top: 5px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    height: 80/75rem;
+    align-items: center;
+    padding-left:23/75rem;
+    border-bottom: 5px solid #F5F5F5;
+    .title {
+      .font-dpr(34px);
+      color: #333;
+    }
+    .input {
+      width:85%;
+      height: 100%;
+      .font-dpr(30px);
+      border: none;
+      color: #CCCCCC;
+      outline: none;
+      margin-left: 27/75rem;
+
+    }
+  }
+  .row2 {
+    .ways {
+      .font-dpr(34px);
+      color: #aaa;
+      line-height: 1.5rem;
+      padding-left: 0.2rem;
+    }
+    ul {
+      width: 100%;
+      padding-left: 0.5rem;
+      overflow: hidden;
+      li {
+        width: 33%;
+        float: left;
+        padding-bottom: 0.5rem;
+        label {
+          width: 70%;
+          margin-left: 0.5rem;
+          height: 1.93333333rem;
+          padding: 0.1rem;
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          border: 1px solid #fff;
+          justify-content: space-between;
+          img {
+            width: 78/75rem;
+            display: inline-block;
+            float: left;
+          }
+          .way-name {
+            float: left;
+            h3 {
+              .font-dpr(28px);
+              color: #999999;
+            }
+            p {
+              font-size: 50%;
+              color: #999;
+            }
+            input {
+              float: right;
+              -webkit-appearance: none;
+              border: none;
+              outline: none;
+              background: url(../../BigImg/check.png) no-repeat center;
+              background-size: 20px;
+              height: 20px;
+              width: 20px;
+              margin-top: 0.35rem;
+              &:checked {
+                background: url(../../BigImg/checked.png) no-repeat center;
+                background-size: 20px;
+              }
+            }
+          }
+        }
+        .elect{
+          border: 1px solid #E05555;
+          border-radius: 0.2rem;
+        }
+      }
+    }
+  }
+  .bar {
+    .bar-detail {
+      margin-top: 30/75rem;
+      width: 100%;
+      line-height: 50px;
+      p {
+        color: #333;
+        font-size: 0.9rem;
+        float: right;
+      }
+      button {
+        color: #cccccc;
+        border-radius: 0.2rem;
+        background-color: rgba(238,238,238,1);
+        height: 80/75rem;
+        line-height:80/75rem;
+        width: 90%;
+        margin:0 24/75rem;
+       .font-dpr(28px);
+        border: none;
+        outline: none;
+        &:hover {
+          background-color: #be1b25;
+        }
+      }
+    }
+  }
+}
+
+
+

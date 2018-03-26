@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding:0;
+}
+em{
+    font-weight: normal;
+    font-style: normal;
+}
+li{
+    list-style: none;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.cred{
+    color:red;
+}
+body {
+    background-color: #f1f1f1;
+    font-family: "Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "\\5b8b体", sans-serif;
+}
+.back{
+    padding: 8px;
+    color:#FFFFFF;
+    line-height: 2rem;
+    text-align: center;
+    /*   width: 100%; */
+    background:#C83C3B;
+}
+.back .backtrack{
+    font-size: 1.5rem;
+    color:#FFFFFF;
+    float:left;
+}
+.back .trolley{
+    font-size: 1.8rem;
+    margin-right: 12vw;
+    color:#FFFFFF;
+}
+.backtrack a{
+    color: #fff;
+    text-decoration:none;
+}
+.header_box{
+    text-align: center;
+    padding:5px 0;
+    border-bottom:1px solid #f0f0f0;
+}
+.header_box i{
+    color:#555;
+    font-size: 22px;
+}
+.header_box h3{
+    font-size: 18px;
+}
+.tab_box{
+    display: flex;
+}
+.tab_box li{
+    display: inline-block;
+    flex:1;
+    text-align: center;
+    padding:10px 0;
+
+}
+.team_tab li.classify-act{
+    border-bottom:1px solid darkgreen;
+}
+.team_tab li .cred{
+    font-size: 12px;
+}
+.tab_container ul{
+    padding:0 15px;
+}
+.tab_container ul li{
+    padding:10px 20px ;
+    border-bottom:1px dashed #ccc;
+}
+.gzh_container{
+    display: none;
+}
+.gzh_container span{
+    border:1px solid red;
+    border-radius: 5px;
+    display: inline-block;
+    height:20px;
+    line-height: 20px;
+    padding:0 5px;
+}
+.gzh_container em{
+    font-size: 12px;
+}

@@ -1,0 +1,133 @@
+
+/*优惠券*/
+section {
+  .youhuiquan {
+    padding: 21/75rem 15/75rem;
+    ul {
+      li {
+        display: flex;
+        align-items: stretch;
+        margin-bottom: 0.3rem;
+        .stamp {
+          width: 100%;
+          padding: 0 10/75rem;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          height: 220/75rem;
+          &:before {
+            background-color: #c83c3b;
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 10/75rem;
+            right: 10/75rem;
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            left: 10/75rem;
+            top: 10/75rem;
+            right: 10/75rem;
+            bottom: 10/75rem;
+          }
+          div {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+          }
+          .full {
+            font-size: 0.6rem;
+            margin-top: 5/75rem;
+          }
+          .using {
+            width: 90%;
+            background-color: #fff;
+            color: #211f1f;
+            font-size: 0.6rem;
+            margin-left: 5%;
+            text-align: center;
+            line-height: 1rem;
+            box-shadow: 0px 4px 10px 1px #821313;
+          }
+          i {
+            position: absolute;
+            left: 20%;
+            top: 45/75rem;
+            height: 190/75rem;
+            width: 100%;
+            background-color: rgba(255, 255, 255, .15);
+            transform: rotate(-30deg);
+          }
+          .par {
+            float: left;
+            width: 40%;
+            border-right: 2px dashed rgba(255, 255, 255, .3);
+            text-align: center;
+            height: 100%;
+            p {
+              color: #fff;
+              .font-dpr(28px);
+              line-height: 0.8rem;
+            }
+            span {
+              .font-dpr(80px);
+              color: #fff;
+              line-height: 2rem;
+            }
+            .sign {
+              .font-dpr(34px);
+            }
+            sub {
+              position: relative;
+              top: -5/75rem;
+              color: rgba(255, 255, 255, .8);
+            }
+          }
+          .copy {
+            isplay: inline-block;
+            vertical-align: text-bottom;
+            color: #ffffff;
+            font-family: Hiragino Sans GB;
+            line-height: initial;
+            position: relative;
+            flex: 1;
+            text-align: left;
+            padding: 0.2rem;
+            p {
+              .font-dpr(26px);
+            }
+              em {
+                .font-dpr(22px);
+                display: inline-block;
+                background: #f39b00;
+                padding: 0 5/75rem;
+                line-height: 0.5rem;
+                margin-right: 10/75rem;
+              }
+            .copy_time {
+              color: #f1f1f1;
+              margin-top: 0.2rem;
+            }
+            .q_lingqu {
+              float: right;
+              color: #fff;
+              border-radius: 45/75rem;
+              border: 1px solid #f2e260;
+              padding: 0 20/75rem;
+              line-height: 0.6rem;
+              font-size: 28/75rem;
+              margin-top: 0.2rem;
+            }
+          }
+        }
+        .stamp01 {
+          background: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 5/75rem, #c83c3b 5/75rem);
+          background-size: 15/75rem 25/75rem;
+          background-position: 15/75rem 0;
+        }
+      }
+    }
+  }
+}
