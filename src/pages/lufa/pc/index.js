@@ -1,6 +1,6 @@
+import 'babel-polyfill';
 import $ from '@pengliheng/jquery';
 import './index.less';
-import 'babel-polyfill';
 
 
 const map = [
@@ -56,34 +56,57 @@ class Trash {
 
   move({ time }) {
     if (this.direct === 'ArrowRight') {
-      // this.snake = this.snake.map((arr) => {
-      // });
-      if (arr.x === this.border.width) {
-        return { x: 0, y: arr.y };
+      if (this.snake[this.snake.length - 1].x === this.border.width) {
+        this.snake.push({
+          x: 0,
+          y: this.snake[this.snake.length - 1].y,
+        });
+      } else {
+        this.snake.push({
+          x: this.snake[this.snake.length - 1].x + 1,
+          y: this.snake[this.snake.length - 1].y,
+        });
       }
-      return { x: Number(arr.x) + 1, y: arr.y };
       this.snake.shift();
     } else if (this.direct === 'ArrowLeft') {
-      this.snake = this.snake.map((arr) => {
-        if (arr.x === 0) {
-          return { x: this.border.width, y: arr.y };
-        }
-        return { x: Number(arr.x) - 1, y: arr.y };
-      });
+      if (this.snake[this.snake.length - 1].x === 0) {
+        this.snake.push({
+          x: this.border.width,
+          y: this.snake[this.snake.length - 1].y,
+        });
+      } else {
+        this.snake.push({
+          x: this.snake[this.snake.length - 1].x - 1,
+          y: this.snake[this.snake.length - 1].y,
+        });
+      }
+      this.snake.shift();
     } else if (this.direct === 'ArrowDown') {
-      this.snake = this.snake.map((arr) => {
-        if (arr.y === this.border.height) {
-          return { x: arr.y, y: 0 };
-        }
-        return { x: arr.x, y: Number(arr.y) + 1 };
-      });
+      if (this.snake[this.snake.length - 1].y === this.border.height) {
+        this.snake.push({
+          x: this.snake[this.snake.length - 1].x,
+          y: 0,
+        });
+      } else {
+        this.snake.push({
+          x: this.snake[this.snake.length - 1].x,
+          y: this.snake[this.snake.length - 1].y + 1,
+        });
+      }
+      this.snake.shift();
     } else if (this.direct === 'ArrowUp') {
-      this.snake = this.snake.map((arr) => {
-        if (arr.y === 0) {
-          return { x: arr.x, y: this.border.height };
-        }
-        return { x: arr.x, y: Number(arr.y) - 1 };
-      });
+      if (this.snake[this.snake.length - 1].y === 0) {
+        this.snake.push({
+          x: this.snake[this.snake.length - 1].x,
+          y: this.border.height,
+        });
+      } else {
+        this.snake.push({
+          x: this.snake[this.snake.length - 1].x,
+          y: this.snake[this.snake.length - 1].y - 1,
+        });
+      }
+      this.snake.shift();
     }
     this.draw();
     setTimeout(() => {
@@ -92,6 +115,15 @@ class Trash {
   }
 
   turn({ direct }) {
+    if (this.direct === 'ArrowUp' && direct === 'ArrowDown') {
+      return;
+    } else if (this.direct === 'ArrowDown' && direct === 'ArrowUp') {
+      return;
+    } else if (this.direct === 'ArrowLeft' && direct === 'ArrowRight') {
+      return;
+    } else if (this.direct === 'ArrowRight' && direct === 'ArrowLeft') {
+      return;
+    }
     this.direct = direct;
   }
 
