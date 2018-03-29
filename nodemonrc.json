@@ -6,6 +6,7 @@
         "test/*",
         "node_modules/*",
         "dist/*",
+        "webpack.config.js",
         "test.js"
     ],
     "env": {

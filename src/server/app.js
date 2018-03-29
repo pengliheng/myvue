@@ -2,39 +2,55 @@
 const Koa = require('koa');
 const http = require('http');
 const path = require('path');
+const json = require('koa-json');
 const koaSend = require('koa-send');
 const logger = require('koa-logger');
-const KoaStatic = require('koa-static');
-const bodyparser = require('koa-bodyparser');
+const koaStatic = require('koa-static');
+// const bodyparser = require('koa-bodyparser');
 
 // local
-const config = require(path.resolve('./config/server'));
+const config = require('../../config/server');
 
 // application
+const app = new Koa();
+const server = http.createServer(app.callback());
 const port = process.env.PORT || config.port;
 
-
-const myvue = new Koa();
-myvue
+app
+// .use(bodyparser())
+  .use(json())
   .use(logger())
-  .use(KoaStatic(path.resolve('./dist/myvue')))
-// 将前端路由指向 index.html
+  .use(koaStatic(path.resolve('./dist'), {
+    gzip: true,
+  }))
+  // 将前端路由指向 index.html
   .use(async (ctx, next) => {
-    if (!/\./.test(ctx.request.url)) {
+    console.log(ctx.request.url);
+    console.log(/xuduoduo/.test(ctx.request.url));
+    if (/^\/xuduoduo/.test(ctx.request.url)) {
       await koaSend(
         ctx,
         'index.html',
-        {
-          root: path.resolve('./dist/myvue'),
-          gzip: true,
-        },
+        { root: path.resolve('./dist/xuduoduo') },
+      );
+    } else if (/^\/fst/.test(ctx.request.url)) {
+      await koaSend(
+        ctx,
+        'index.html',
+        { root: path.resolve('./dist/fst') },
+      );
+    } else if (/^\/lufa/.test(ctx.request.url)) {
+      await koaSend(
+        ctx,
+        'index.html',
+        { root: path.resolve('./dist/lufa') },
       );
     } else {
       await next();
     }
   });
 
-
-http.createServer(myvue.callback()).listen(8001, () => {
-  console.log(` myvue项目监听端口: ${8001}`);
+server.listen(port, () => {
+  console.log(` >>> port: ${port}`);
+  console.log(` >>> ENV: ${process.env.NODE_ENV}`);
 });
