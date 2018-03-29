@@ -37,10 +37,11 @@ class Trash {
     this.snake = [
       { x: 1, y: 5 },
       { x: 2, y: 5 },
-      { x: 3, y: 5 },
-      { x: 4, y: 5 },
-      { x: 5, y: 5 },
     ];
+    this.food = {
+      x: Math.floor(Math.random() * this.border.width),
+      y: Math.floor(Math.random() * this.border.height),
+    };
   }
 
   draw() {
@@ -52,6 +53,26 @@ class Trash {
     this.snake.forEach(({ x, y }) => {
       document.querySelector(`.list-${y}-${x}`).classList.add('active');
     });
+    document.querySelector(`.list-${this.food.y}-${this.food.x}`).classList.add('food');
+  }
+
+  generate() {
+    document.querySelector(`.list-${this.food.y}-${this.food.x}`).classList.remove('food');
+    this.food = {
+      x: Math.floor(Math.random() * this.border.width),
+      y: Math.floor(Math.random() * this.border.height),
+    };
+  }
+  isEat() {
+    const top = this.snake[this.snake.length - 1];
+    if (
+      top.x === this.food.x &&
+      top.y === this.food.y
+    ) {
+      this.generate();
+      return true;
+    }
+    return false;
   }
 
   move({ time }) {
@@ -67,7 +88,6 @@ class Trash {
           y: this.snake[this.snake.length - 1].y,
         });
       }
-      this.snake.shift();
     } else if (this.direct === 'ArrowLeft') {
       if (this.snake[this.snake.length - 1].x === 0) {
         this.snake.push({
@@ -80,7 +100,6 @@ class Trash {
           y: this.snake[this.snake.length - 1].y,
         });
       }
-      this.snake.shift();
     } else if (this.direct === 'ArrowDown') {
       if (this.snake[this.snake.length - 1].y === this.border.height) {
         this.snake.push({
@@ -93,7 +112,6 @@ class Trash {
           y: this.snake[this.snake.length - 1].y + 1,
         });
       }
-      this.snake.shift();
     } else if (this.direct === 'ArrowUp') {
       if (this.snake[this.snake.length - 1].y === 0) {
         this.snake.push({
@@ -106,6 +124,8 @@ class Trash {
           y: this.snake[this.snake.length - 1].y - 1,
         });
       }
+    }
+    if (!this.isEat()) {
       this.snake.shift();
     }
     this.draw();
@@ -124,7 +144,12 @@ class Trash {
     } else if (this.direct === 'ArrowRight' && direct === 'ArrowLeft') {
       return;
     }
-    this.direct = direct;
+    if (direct === 'ArrowUp' ||
+      direct === 'ArrowDown' ||
+      direct === 'ArrowRight' ||
+      direct === 'ArrowLeft') {
+      this.direct = direct;
+    }
   }
 
   init({ time }) {
