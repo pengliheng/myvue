@@ -34,6 +34,7 @@
 		"less": "^2.7.3"
 	},
 	"dependencies": {
+		"@pengliheng/jquery": "^1.0.5",
 		"babel-loader": "^7.1.2",
 		"chai": "^4.1.2",
 		"clean-webpack-plugin": "^0.1.18",
@@ -58,6 +59,7 @@
 		"path": "^0.12.7",
 		"peng-component": "^1.1.13",
 		"style-loader": "^0.20.1",
+		"vconsole": "^3.1.0",
 		"vue": "^2.5.13",
 		"vue-awesome": "^2.3.4",
 		"vue-loader": "^14.1.1",
