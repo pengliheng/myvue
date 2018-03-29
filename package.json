@@ -18,7 +18,7 @@
 	"keywords": [
 		"vue vue-router url-control"
 	],
-	"author": "彭立衡",
+	"author": "pengliheng",
 	"license": "MIT",
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
@@ -35,6 +35,7 @@
 	},
 	"dependencies": {
 		"axios": "^0.18.0",
+		"@pengliheng/jquery": "^1.0.5",
 		"babel-loader": "^7.1.2",
 		"chai": "^4.1.2",
 		"clean-webpack-plugin": "^0.1.18",
@@ -59,7 +60,11 @@
 		"path": "^0.12.7",
 		"peng-component": "^1.2.1",
 		"style-loader": "^0.20.1",
+<<<<<<< HEAD
 		"swiper": "^4.1.6",
+=======
+		"vconsole": "^3.1.0",
+>>>>>>> 4001b2592b3c7f0c3983b1fa29896bc9e8e28472
 		"vue": "^2.5.13",
 		"vue-awesome": "^2.3.4",
 		"vue-loader": "^14.1.1",
