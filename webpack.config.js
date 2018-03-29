@@ -13,26 +13,26 @@ const prodWebpackConfig = require('./build/webpack.prod');
 
 module.exports = env => [
   // 如果不需要打包该项目，注释即可
-  // merge(
-  //   baseConfig,
-  //   fstConfig,
-  //   env.NODE_ENV === 'dev' ? devWebpackConfig : prodWebpackConfig,
-  //   {
-  //     plugins: [
-  //       new CleanWebpackPlugin(['dist/fst']),
-  //     ],
-  //   },
-  // ),
-  // merge(
-  //   baseConfig,
-  //   xuduoduoConfig,
-  //   env.NODE_ENV === 'dev' ? devWebpackConfig : prodWebpackConfig,
-  //   {
-  //     plugins: [
-  //       new CleanWebpackPlugin(['dist/xuduoduo']),
-  //     ],
-  //   },
-  // ),
+  merge(
+    baseConfig,
+    fstConfig,
+    env.NODE_ENV === 'dev' ? devWebpackConfig : prodWebpackConfig,
+    {
+      plugins: [
+        new CleanWebpackPlugin(['dist/fst']),
+      ],
+    },
+  ),
+  merge(
+    baseConfig,
+    xuduoduoConfig,
+    env.NODE_ENV === 'dev' ? devWebpackConfig : prodWebpackConfig,
+    {
+      plugins: [
+        new CleanWebpackPlugin(['dist/xuduoduo']),
+      ],
+    },
+  ),
   merge(
     baseConfig,
     lufaConfig,
