@@ -17,5 +17,5 @@ module.exports = function (pandora) {
     })
 
   // 这个进程的入口文件地址
-    .entry('./src/server/index.js');
+    .entry('./src/index.js');
 };
