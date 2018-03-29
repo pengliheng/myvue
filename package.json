@@ -5,11 +5,13 @@
 	"homepage": "https://www.pipk.top",
 	"main": "dist/index.js",
 	"scripts": {
-		"nodemon": "set NODE_ENV=dev&& nodemon ./src/server/app.js --config nodemonrc.json",
+		"w": "webpack --color --progress --env.NODE_ENV=dev -w",
+		"b": "webpack --color --progress --env.NODE_ENV=dev",
+		"p": "webpack --color --progress --env.NODE_ENV=prod -p",
+		"nodemon": "set NODE_ENV=dev&& nodemon ./src --config nodemonrc.json",
+		"build": "node build/build.js",
 		"t": "parcel test/index.html",
-		"b": "webpack --color --env.NODE_ENV=dev --progress",
-		"w": "webpack --color --watch --env.NODE_ENV=dev --progress",
-		"parcel": "parcel build test/index.html --public-url ./"
+		"server": "node server/bin/www"
 	},
 	"repository": {
 		"type": "git",
@@ -34,13 +36,15 @@
 		"less": "^2.7.3"
 	},
 	"dependencies": {
-		"axios": "^0.18.0",
 		"@pengliheng/jquery": "^1.0.5",
+		"axios": "^0.18.0",
 		"babel-loader": "^7.1.2",
 		"chai": "^4.1.2",
 		"clean-webpack-plugin": "^0.1.18",
 		"css-loader": "^0.28.9",
 		"eslint-plugin-vue": "^4.3.0",
+		"express": "^4.16.3",
+		"express-device": "^0.4.2",
 		"extract-text-webpack-plugin": "4.0.0-beta.0",
 		"file-loader": "^1.1.6",
 		"font-awesome": "^4.7.0",
@@ -60,11 +64,7 @@
 		"path": "^0.12.7",
 		"peng-component": "^1.2.1",
 		"style-loader": "^0.20.1",
-<<<<<<< HEAD
-		"swiper": "^4.1.6",
-=======
 		"vconsole": "^3.1.0",
->>>>>>> 4001b2592b3c7f0c3983b1fa29896bc9e8e28472
 		"vue": "^2.5.13",
 		"vue-awesome": "^2.3.4",
 		"vue-loader": "^14.1.1",
