@@ -22,7 +22,7 @@
 	],
 	"author": "pengliheng",
 	"license": "MIT",
-	"devDependencies": {
+	"dependencies": {
 		"koa": "^2.4.1",
 		"koa-bodyparser": "^4.2.0",
 		"koa-json": "^2.0.2",
@@ -36,7 +36,7 @@
 		"express": "^4.16.3",
 		"express-device": "^0.4.2"
 	},
-	"dependencies": {
+	"devDependencies": {
 		"babel-cli": "^6.26.0",
 		"babel-core": "^6.26.0",
 		"babel-helper-vue-jsx-merge-props": "^2.0.3",
